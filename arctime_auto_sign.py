@@ -81,6 +81,7 @@ def auto_sign():
         content = res.text
         # 获取现有积分
         points = getmidstring(content, "共获得", "积分")
+        log_print("获取的参数：%s" content)
         log_print("您目前拥有的积分为：%s" % points)
         if content.find("立即签到领取积分") > -1:
             headers = {
